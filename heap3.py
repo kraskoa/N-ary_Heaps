@@ -5,7 +5,7 @@ class Heap3:
     def add(self, value):
         self.heap.append(value)
         index = len(heap) - 1
-        parent_index = (index - 1) / 2
+        parent_index = (index - 1) // 3
         while (index > 0) and (heap[index] > heap[parent_index]):
             pass
 
