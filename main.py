@@ -68,7 +68,7 @@ def main():
         gc_old = gc.isenabled()
         gc.disable()
         start = time.process_time()
-        for i in range(len(value)):
+        for i in range(key+1):
             heap_2.remove()
         stop = time.process_time()
         removal_time = stop - start
@@ -84,7 +84,7 @@ def main():
         gc_old = gc.isenabled()
         gc.disable()
         start = time.process_time()
-        for i in range(len(value)):
+        for i in range(key+1):
             heap_3.remove()
         stop = time.process_time()
         removal_time = stop - start
@@ -100,7 +100,7 @@ def main():
         gc_old = gc.isenabled()
         gc.disable()
         start = time.process_time()
-        for i in range(len(value)):
+        for i in range(key+1):
             heap_4.remove()
         stop = time.process_time()
         removal_time = stop - start

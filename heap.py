@@ -11,7 +11,7 @@ class Heap:
         if not self.heap:
             return
         self.heap[0], self.heap[-1] = self.heap[-1], self.heap[0]
-        value = self.heap.pop()
+        self.heap.pop()
         self.heapify_down(0)
 
     def heapify_up(self, index):
@@ -60,21 +60,35 @@ class Heap:
 
 
 def main():
-    heap = Heap(2)
-    heap.add(1)
-    heap.add(2)
-    heap.add(3)
-    heap.add(4)
-    heap.add(5)
-    heap.add(6)
-    heap.add(7)
-    heap.print_heap()
-    heap.remove()
-    heap.print_heap()
-    heap.remove()
-    heap.print_heap()
-    heap.remove()
-    heap.print_heap()
+    print("2-ary heap:")
+    heap_2 = Heap(2)
+    for i in range(10):
+        heap_2.add(i)
+    heap_2.print_heap()
+    heap_2.remove()
+    heap_2.print_heap()
+    heap_2.remove()
+    heap_2.print_heap()
+
+    print("3-ary heap:")
+    heap_3 = Heap(3)
+    for i in range(10):
+        heap_3.add(i)
+    heap_3.print_heap()
+    heap_3.remove()
+    heap_3.print_heap()
+    heap_3.remove()
+    heap_3.print_heap()
+
+    print("4-ary heap:")
+    heap_4 = Heap(4)
+    for i in range(10):
+        heap_4.add(i)
+    heap_4.print_heap()
+    heap_4.remove()
+    heap_4.print_heap()
+    heap_4.remove()
+    heap_4.print_heap()
 
 
 if __name__=="__main__":
