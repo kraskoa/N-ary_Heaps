@@ -7,6 +7,13 @@ class Heap:
         self.heap.append(value)
         self.heapify_up(len(self.heap) - 1)
 
+    def remove(self):
+        if not self.heap:
+            return
+        self.heap[0], self.heap[-1] = self.heap[-1], self.heap[0]
+        value = self.heap.pop()
+        self.heapify_down(0)
+
     def heapify_up(self, index):
         parent = (index - 1) // self.n
         if index > 0 and self.heap[index] > self.heap[parent]:
@@ -49,13 +56,23 @@ class Heap:
             depth += 1
 
 
-heap = Heap(4)
-heap.add(1)
-heap.add(2)
-heap.add(3)
-heap.add(4)
-heap.add(5)
-heap.add(6)
-heap.add(7)
+def main():
+    heap = Heap(2)
+    heap.add(1)
+    heap.add(2)
+    heap.add(3)
+    heap.add(4)
+    heap.add(5)
+    heap.add(6)
+    heap.add(7)
+    heap.print_heap()
+    heap.remove()
+    heap.print_heap()
+    heap.remove()
+    heap.print_heap()
+    heap.remove()
+    heap.print_heap()
 
-heap.print_heap()
+
+if __name__=="__main__":
+    main()
