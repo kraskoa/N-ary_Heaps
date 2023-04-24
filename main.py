@@ -109,9 +109,25 @@ def main():
         heap_4_removal_times[key] = removal_time
     print("Heap 4 removal times:", heap_4_removal_times)
 
+    combined_3_graph_maker(
+        heap_2_insertion_times,
+        "Heap 2 insertion times",
+        heap_3_insertion_times,
+        "Heap 3 insertion times",
+        heap_4_insertion_times,
+        "Heap 4 insertion times",
+        "Combined node adding times",
+    )
 
-
-
+    combined_3_graph_maker(
+        heap_2_removal_times,
+        "Heap 2 removal times",
+        heap_3_removal_times,
+        "Heap 3 removal times",
+        heap_4_removal_times,
+        "Heap 4 removal times",
+        "Combined node removal times",
+    )
 
 
 if __name__=="__main__":
