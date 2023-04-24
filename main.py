@@ -10,7 +10,7 @@ def main():
     heap_3_removal_times = {}
     heap_4_removal_times = {}
 
-    list = create_list(100000)
+    test_lists = {i:create_list(i) for i in range(10000, 100001, 10000)}
     heap_2 = Heap(2)
     heap_3 = Heap(3)
     heap_4 = Heap(4)

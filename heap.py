@@ -55,6 +55,9 @@ class Heap:
             )  # Print nodes at the current level
             depth += 1
 
+        def clear(self):
+            self.heap = []
+
 
 def main():
     heap = Heap(2)
