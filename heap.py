@@ -65,8 +65,10 @@ def main():
     for i in range(10):
         heap_2.add(i)
     heap_2.print_heap()
+    print("Removing element from heap")
     heap_2.remove()
     heap_2.print_heap()
+    print("Removing element from heap")
     heap_2.remove()
     heap_2.print_heap()
 
@@ -75,8 +77,10 @@ def main():
     for i in range(10):
         heap_3.add(i)
     heap_3.print_heap()
+    print("Removing element from heap")
     heap_3.remove()
     heap_3.print_heap()
+    print("Removing element from heap")
     heap_3.remove()
     heap_3.print_heap()
 
@@ -85,8 +89,10 @@ def main():
     for i in range(10):
         heap_4.add(i)
     heap_4.print_heap()
+    print("Removing element from heap")
     heap_4.remove()
     heap_4.print_heap()
+    print("Removing element from heap")
     heap_4.remove()
     heap_4.print_heap()
 
