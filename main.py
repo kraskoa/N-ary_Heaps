@@ -4,6 +4,7 @@ from heap import Heap
 from graph_maker import combined_3_graph_maker
 from create_list import create_list
 
+
 def main():
     heap_2_insertion_times = {}
     heap_3_insertion_times = {}
@@ -12,12 +13,10 @@ def main():
     heap_3_removal_times = {}
     heap_4_removal_times = {}
 
-    test_lists = {i:create_list(i) for i in range(10000, 100001, 10000)}
+    test_lists = {i: create_list(i) for i in range(10000, 100001, 10000)}
     heap_2 = Heap(2)
     heap_3 = Heap(3)
     heap_4 = Heap(4)
-
-
 
     for key, value in test_lists.items():
         heap_2.clear()
@@ -68,7 +67,7 @@ def main():
         gc_old = gc.isenabled()
         gc.disable()
         start = time.process_time()
-        for i in range(key+1):
+        for i in range(key + 1):
             heap_2.remove()
         stop = time.process_time()
         removal_time = stop - start
@@ -84,7 +83,7 @@ def main():
         gc_old = gc.isenabled()
         gc.disable()
         start = time.process_time()
-        for i in range(key+1):
+        for i in range(key + 1):
             heap_3.remove()
         stop = time.process_time()
         removal_time = stop - start
@@ -100,7 +99,7 @@ def main():
         gc_old = gc.isenabled()
         gc.disable()
         start = time.process_time()
-        for i in range(key+1):
+        for i in range(key + 1):
             heap_4.remove()
         stop = time.process_time()
         removal_time = stop - start
@@ -130,5 +129,5 @@ def main():
     )
 
 
-if __name__=="__main__":
+if __name__ == "__main__":
     main()
